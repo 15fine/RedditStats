@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+        <title>Stats For Reddit: User Search</title>
+    </head>
+    <body class="bg">
+        <div class="title-block-2">
+            <span style="color: red;">Reddit</span><span style="color: rgb(51, 102, 255);">Stats</span>
+        </div>
+        <div class="buttons">
+            <form action="/user-search" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="user" placeholder="Username" type="text">
+                </div>
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </body>
+</html>

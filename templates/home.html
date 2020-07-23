@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.png">
+        <title>Stats For Reddit</title>
+    </head>
+    <body class="bg">
+        <div class="title-block">
+            <span style="color: red;">Reddit</span><span style="color: rgb(51, 102, 255);">Stats</span>
+        </div>
+        <div>
+            <p class="caption">Statistics for Reddit, simplified.</p>
+        </div>
+        <div class="buttons">
+            <a href="/user" class="btn btn-dark btn-lg" role="button">Users</a> <a href="/subreddit" class="btn btn-dark btn-lg" role="button">Subreddits</a>
+        </div>
+    </body>
+</html>
