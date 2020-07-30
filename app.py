@@ -1,8 +1,6 @@
 # DEPENDANCIES
 from flask import Flask, redirect, render_template, request
 import praw
-import pandas as pd
-import datetime as dt
 
 # INITIALISE FLASK APP
 app = Flask(__name__)
