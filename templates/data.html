@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+        <title>StatsForReddit: {{ prefix }}{{ userinput }}</title>
+    </head>
+    <body class="bg">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand"><span class="red">Reddit</span><span class="blue">Stats</span></a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/user">User</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/subreddit">Subreddit</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <div style="font-size: 40px;">
+            <span style="color: red;">{{ prefix }}</span><span style="color: rgb(51, 102, 255);">{{ userinput }}</span><span style="font-size: 20px; color: white;">  analytics</span>
+        </div>
+        <div class="table-div">
+          <table>
+              <tr>
+                  <th>
+                    <p style="color:black; font-size: 20px"><strong>Buzzwords</strong></p>
+                    <table style="width: 650px; color:black;" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%">Rank</th>
+                                <th style="width: 70%">Word</th>
+                                <th style="width: 20%">Uses</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>{{ word_counter[0][0] }} </td>
+                                <td>{{ word_counter[0][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>{{ word_counter[1][0] }} </td>
+                                <td>{{ word_counter[1][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3.</th>
+                                <td>{{ word_counter[2][0] }} </td>
+                                <td>{{ word_counter[2][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4.</th>
+                                <td>{{ word_counter[3][0] }} </td>
+                                <td>{{ word_counter[3][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5.</th>
+                                <td>{{ word_counter[4][0] }} </td>
+                                <td>{{ word_counter[4][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6.</th>
+                                <td>{{ word_counter[5][0] }} </td>
+                                <td>{{ word_counter[5][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7.</th>
+                                <td>{{ word_counter[6][0] }} </td>
+                                <td>{{ word_counter[6][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8.</th>
+                                <td>{{ word_counter[7][0] }} </td>
+                                <td>{{ word_counter[7][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9.</th>
+                                <td>{{ word_counter[8][0] }} </td>
+                                <td>{{ word_counter[8][1] }} </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10.</th>
+                                <td>{{ word_counter[9][0] }} </td>
+                                <td>{{ word_counter[9][1] }} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </th>
+                </tr>
+              </table>
+        </div>
+        <div>
+            <p class="data-1">{{ posts }}</p>
+            <p class="data-1-caption">{{ holder1 }}</p>
+        </div>
+        <div>
+            <p class="data-2">{{ upvotes }}</p>
+            <p class="data-2-caption">Upvotes</p>
+        </div>
+        <div>
+            <p class="data-3">{{ highest_ups }}</p>
+            <p class="data-3-caption">Highest Upvotes</p>
+        </div>
+        <div>
+            <p class="data-4">{{ avg_upvotes }}</p>
+            <p class="data-4-caption">Average Upvotes</p>
+        </div>
+    </body>
+</html>

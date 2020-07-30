@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
         <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
         <title>Stats For Reddit: Subreddit Search</title>
     </head>
     <body class="bg">
@@ -16,7 +17,7 @@
             <span style="color: red;">Reddit</span><span style="color: rgb(51, 102, 255);">Stats</span>
         </div>
         <div class="buttons">
-            <form action="/sub-search" method="post">
+            <form action="/subreddit" method="post">
                 <div class="form-group">
                     <input autocomplete="off" autofocus class="form-control" name="sub" placeholder="Subreddit" type="text">
                 </div>
