@@ -1,5 +1,5 @@
-#RedditStats
-###Statistics for Reddit, simplified
+# RedditStats
+### Statistics for Reddit, simplified
 
 RedditStats is a web application designed to allow users to view analytics of any public subreddit. 
 It displays the total number of upvotes, average upvotes per post, as well as the top 10 most-used words in post titles of the subreddit, alongside other data.
